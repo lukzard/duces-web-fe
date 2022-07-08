@@ -11,6 +11,6 @@ export class ContactService {
 
   sendMessage(message: any) {
     // return this.http.post('/api/email/send', message);
-    return this.http.post('https://api.' + this.document.location.hostname + '/email/send', message);
+    return this.http.post('https://api.duces.ai/email/send', message);
   }
 }
