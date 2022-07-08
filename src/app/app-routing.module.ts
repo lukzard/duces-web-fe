@@ -9,19 +9,19 @@ import { TermsConditionsComponent } from './pages/terms-conditions/terms-conditi
 import { DucesAiComponent } from './pages/duces-ai/duces-ai.component';
 
 const routes: Routes = [
-    {path: '', component: DucesAiComponent},
+    {path: 'duces-ai', component: DucesAiComponent},
     {path: 'privacy-policy', component: PrivacyPolicyComponent},
     {path: 'terms-conditions', component: TermsConditionsComponent},
     {path: 'services-details', component: ServicesDetailsComponent},
     {path: 'projects-details', component: ProjectsDetailsComponent},
     {path: 'blog-details', component: BlogDetailsComponent},
     // Here add new pages component
-
+    { path: '',   redirectTo: '/duces-ai', pathMatch: 'full' },
     {path: '**', component: NotFoundComponent} // This line will remain down from the whole pages component list
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled' })],
     exports: [RouterModule]
 })
 export class AppRoutingModule { }

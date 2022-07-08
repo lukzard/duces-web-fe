@@ -20,23 +20,28 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/luaz-ng",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "allowedCommonJsDependencies": [
+              "ngx-accordion",
+              "ng2-sticky-nav",
+              "smoothscroll-polyfill"
+            ],
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-                "src/favicon.ico",
-                "src/assets"
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
-                "node_modules/bootstrap/scss/bootstrap.scss",
-                "node_modules/animate.css/animate.min.css",
-                "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-                "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
-                "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
-                "src/styles.scss"
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "node_modules/animate.css/animate.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
+              "src/styles.scss"
             ],
             "scripts": []
           },

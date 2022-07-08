@@ -21,13 +21,16 @@
         <div class="collapse navbar-collapse" [ngClass]="{'nav-center': router?.url === '/it-agency'}">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <span class="nav-link" (click)="onClick('home')">Home</span>
+                    <!-- <span class="nav-link" (click)="onClick('home')">Home</span> -->
+                    <a class="nav-link" routerLink="/duces-ai" fragment="home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <span class="nav-link" (click)="onClick('services')">Services</span>
+                    <!-- <span class="nav-link" (click)="onClick('services')">Services</span> -->
+                    <a class="nav-link" routerLink="/duces-ai" fragment="services">Services</a>
                 </li>
                 <li class="nav-item">
-                    <span class="nav-link" (click)="onClick('about')">About Us</span>
+                    <!-- <span class="nav-link" (click)="onClick('about')">About Us</span> -->
+                    <a class="nav-link" routerLink="/duces-ai" fragment="about">About Us</a>
                 </li>
                 <!-- <li class="nav-item">
                     <span class="nav-link" (click)="onClick('portfolio')">Portfolio</span>
@@ -39,19 +42,21 @@
                     <span class="nav-link" (click)="onClick('blog')">Blog</span>
                 </li> -->
                 <li class="nav-item">
-                    <span class="nav-link" (click)="onClick('collaboration')">Colaboration Model</span>
+                    <!-- <span class="nav-link" (click)="onClick('collaboration')">Colaboration Model</span> -->
+                    <a class="nav-link" routerLink="/duces-ai" fragment="collaboration">Colaboration Model</a>
                 </li>
                 <li class="nav-item">
-                    <span class="nav-link" (click)="onClick('partners')">Clients</span>
+                    <!-- <span class="nav-link" (click)="onClick('partners')">Clients</span> -->
+                    <a class="nav-link" routerLink="/duces-ai" fragment="partners">Clients</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <span class="nav-link" (click)="onClick('contact')">Hire Us</span>
-                </li> -->
+                <li class="nav-item">
+                    <!-- <span class="nav-link" (click)="onClick('contact')">Hire Us</span> -->
+                    <!-- <a class="nav-link" routerLink="/duces-ai" fragment="contact">Hire Us</a> -->
+                </li>
             </ul>
             <div class="others-options">
-                <button (click)="onClick('contact')" class="default-btn">
-                    Hire Us
-                </button>
+                <!-- <button (click)="onClick('contact')" class="default-btn">Hire Us</button> -->
+                <button class="default-btn" routerLink="/duces-ai" fragment="contact">Hire Us</button>
             </div>
         </div>
     </div>
