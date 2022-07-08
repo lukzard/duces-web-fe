@@ -23,11 +23,6 @@
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "allowedCommonJsDependencies": [
-              "ngx-accordion",
-              "ng2-sticky-nav",
-              "smoothscroll-polyfill"
-            ],
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
