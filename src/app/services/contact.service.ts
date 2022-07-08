@@ -1,16 +1,14 @@
 import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { DOCUMENT } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
 
-  constructor(private http: HttpClient, @Inject(DOCUMENT) private document: any) { }
+  constructor(private http: HttpClient) { }
 
   sendMessage(message: any) {
-    // return this.http.post('/api/email/send', message);
-    return this.http.post('https://api.duces.ai/email/send', message);
+    return this.http.post(window.location.protocol + '//api.' + window.location.hostname + '/email/send', message);
   }
 }
