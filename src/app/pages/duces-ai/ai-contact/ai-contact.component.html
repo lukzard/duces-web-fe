@@ -1,0 +1,141 @@
+<!-- <div id="contact" class="contact-area ptb-100">
+    <div class="container">
+        <div class="contact-content">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12">
+                    <h2>Contact Us</h2>
+                    <p>Do you have a project we can help you with? Do you have missing expertise in the team? Let's talk.</p>
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="name" placeholder="Your name & company" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Email address" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="subject" placeholder="Subject" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="phone-number" placeholder="Phone number" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" placeholder="Your message..." cols="30" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input
+                                            name="gridCheck"
+                                            value="I agree to the terms and privacy policy."
+                                            class="form-check-input"
+                                            type="checkbox"
+                                            id="gridCheck"
+                                        >
+                                        <label class="form-check-label" for="gridCheck">
+                                            Accept <a routerLink="/terms-conditions">Terms of Services</a> and <a routerLink="/privacy-policy">Privacy Policy</a>
+                                        </label>
+                                        <div class="help-block with-errors gridCheck-error"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <button type="submit" class="default-btn">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="contact-image">
+                        <img src="assets/images/contact.png" alt="contact">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div id="contact" class="contact-area bg-f9f9f9 ptb-100">
+    <div class="container">
+        <div class="contact-content">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12">
+                    <div class="contact-image">
+                        <img src="assets/images/contact.png" alt="contact">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+
+                    <h2>Hire Us</h2>
+                    <p>Do you have a Data project we can help you with? Or for any other enquiries, let us know the
+                        details.</p>
+                    <form class="contact-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="name" formControlName="name"
+                                        placeholder="Your name & company" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="email" name="email" formControlName="email" placeholder="Email address"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="subject" formControlName="subject" placeholder="Subject"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" name="phone-number" formControlName="phoneNumber"
+                                        placeholder="Phone number" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" formControlName="message"
+                                        placeholder="Your ask..." cols="30" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input name="gridCheck" value="I agree to the terms and privacy policy."
+                                            class="form-check-input" formControlName="acceptTerms" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Accept our
+                                            <!-- <a routerLink="/terms-conditions">Terms of Services</a> and  -->
+                                            <a routerLink="/privacy-policy" target="_blank">Privacy Policy</a>
+                                        </label>
+                                        <div class="help-block with-errors gridCheck-error"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <button type="submit" [disabled]="!form.valid" class="default-btn">Send Message</button>
+                            </div>
+                            <!-- <div class="col-lg-6 col-md-6 col-sm-6">
+                                <button type="button" (click)="onReset()" [disabled]="form.pristine" class="default-btn">Reset</button>
+                            </div> -->
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
